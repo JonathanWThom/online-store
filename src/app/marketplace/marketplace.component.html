@@ -1,7 +1,10 @@
 <h2>Marketplace</h2>
 
 <p>All our fine products will be listed here shortly!</p>
-
-<ul *ngFor="let currentAlbum of masterAlbumList">
-  <li>{{currentAlbum.name}}</li>
-</ul>
+<div *ngFor="let album of albums" (click)="goToDetailPage(album)" class="panel panel-default">
+  <div class="panel-body">
+    <ul>
+      <li>{{album.title}}, {{album.artist}}</li>
+    </ul>
+  </div>
+</div>
